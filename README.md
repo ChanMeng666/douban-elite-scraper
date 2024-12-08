@@ -1,27 +1,39 @@
-# Douban Elite Scraper
+<div align="center">
+ <h1> 🔍 Douban Elite Scraper</h1>
+ <p>Archive elite posts from Douban groups with style</p>
 
-A lightweight Python tool designed to scrape and archive elite posts from Douban groups. This scraper automatically collects post content, downloads associated images, and organizes everything into well-structured Markdown files for easy reading and archiving.
+ <img src="https://img.shields.io/badge/python-v3.7+-blue?style=flat&logo=python&logoColor=white"/>
+ <img src="https://img.shields.io/badge/beautifulsoup4-latest-green?style=flat"/>
+ <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=flat"/>
+ <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=flat"/>
+</div>
 
-## Features
+## ✨ Features
 
-- 🔍 Scrapes elite posts from specified Douban groups
-- 📥 Downloads and saves all images from posts
-- 📝 Generates clean Markdown files with post content
-- 🚦 Implements rate limiting to avoid server overload
-- 🔒 Handles file naming conflicts with smart sanitization
-- 📊 Preserves post metadata (author, source URL)
+### 🎯 Smart Content Extraction
+Intelligently scrapes elite posts while respecting Douban's access patterns and rate limits.
 
-## Prerequisites
+### 📸 Complete Media Preservation
+Downloads and organizes all images associated with each post, maintaining the original content integrity.
 
-- Python 3.7+
-- pip (Python package installer)
+### 📝 Clean Markdown Generation
+Converts posts into well-structured Markdown files, perfect for offline reading and archival.
 
-## Installation
+### 🔒 Robust Error Handling
+Comprehensive error management for network issues, missing content, and file system operations.
+
+### 🚦 Rate Limiting Protection
+Built-in delays and smart request handling to avoid overwhelming Douban's servers.
+
+### 📊 Metadata Preservation
+Retains important post information including author details and source URLs.
+
+## 🚀 Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ChanMeng666/Douban-elite-scraper.git
-cd Douban-elite-scraper
+git clone https://github.com/ChanMeng666/douban-elite-scraper.git
+cd douban-elite-scraper
 ```
 
 2. Install required dependencies:
@@ -29,14 +41,14 @@ cd Douban-elite-scraper
 pip install -r requirements.txt
 ```
 
-## Usage
+## 💻 Usage
 
-1. The scraper can be run directly using Python:
+1. Run the scraper:
 ```bash
 python main.py
 ```
 
-2. By default, it will scrape elite posts from the specified Douban group. To modify target groups or configure scraping behavior, edit the following variables in `main.py`:
+2. Configure target groups by editing `main.py`:
 ```python
 # Skip specific posts by title
 skip_titles = ["够用就好2"]
@@ -45,7 +57,7 @@ skip_titles = ["够用就好2"]
 base_url = "https://www.douban.com/group/662976/?type=elite#topics"
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 douban-elite-scraper/
@@ -54,20 +66,9 @@ douban-elite-scraper/
 └── requirements.txt # Project dependencies
 ```
 
-## Output Format
+## 📦 Output Format
 
-For each scraped post, the script creates:
-
-1. A new directory named after the post (sanitized)
-2. A `post.md` file containing:
-   - Post title
-   - Author information
-   - Original URL
-   - Post content
-   - Image references
-3. Downloaded images in the same directory
-
-Example output structure:
+Each scraped post creates:
 ```
 Post_Title_123abc/
 ├── post.md
@@ -76,40 +77,55 @@ Post_Title_123abc/
 └── image_3.jpg
 ```
 
-## Configuration
+The `post.md` file contains:
+- Post title
+- Author information
+- Original URL
+- Post content
+- Image references
+
+## ⚙️ Configuration
 
 The scraper includes several configurable options in the `DoubanScraper` class:
-
 - User-Agent headers
 - File naming patterns
 - Rate limiting delays
 - Output formatting
 
-## Rate Limiting
+## 🛡️ Rate Limiting
 
-To be respectful to Douban's servers, the scraper implements a 2-second delay between requests. This can be adjusted in `main.py`:
-
+The scraper implements a 2-second delay between requests by default. Adjust in `main.py`:
 ```python
 time.sleep(2)  # Adjust delay as needed
 ```
 
-## Error Handling
-
-The scraper includes robust error handling for:
-- Network connectivity issues
-- Invalid URLs
-- Missing content
-- File system operations
-- Image download failures
-
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Legal Notice
+## ⚠️ Legal Notice
 
 This tool is for educational purposes only. Please ensure compliance with Douban's terms of service and implement appropriate rate limiting. The user is responsible for how they use this tool.
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+<details>
+<summary>
+  🔧 Advanced Configuration
+</summary>
+
+The `DoubanScraper` class provides additional configuration options:
+
+```python
+scraper = DoubanScraper(
+    headers={'User-Agent': 'your-custom-user-agent'},
+    delay=3,  # Custom delay between requests
+    output_format='markdown'  # Output format
+)
+```
+
+See `scraper.py` for more configuration options.
+
+</details>
