@@ -129,3 +129,7 @@ scraper = DoubanScraper(
 See `scraper.py` for more configuration options.
 
 </details>
+
+## 🙋‍♀ Author
+
+Created and maintained by [Chan Meng](https://github.com/ChanMeng666).
