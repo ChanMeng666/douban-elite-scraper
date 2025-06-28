@@ -10,7 +10,7 @@ One-click **FREE** deployment of your content archiving solution.
 
 <br/>
 
-[![🚀 Try Demo 🚀](https://img.shields.io/badge/🚀%20Try%20Demo%20🚀-Live-28a745?style=for-the-badge&labelColor=000000)](https://github.com/ChanMeng666/douban-elite-scraper)
+[![👉Try It Now!👈](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%91%89Try%20It%20Now!%F0%9F%91%88&color=000000&height=60&gradientType=radial&duration=6s&color0=ffffff&template=pride-rainbow)](https://github.com/ChanMeng666/douban-elite-scraper)
 
 <br/>
 
